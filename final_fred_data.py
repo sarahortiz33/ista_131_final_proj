@@ -9,7 +9,7 @@ def reserves_15_years():
     This function creates a scatter plot with a regression line using the data
     from 2007 to 2022.
 
-    return: Nothing is returned by this function as it creates a plot
+    return: Nothing is returned by this function as it creates a plot.
     """
     df = pd.read_csv('TOTRESNS.csv', index_col=0)
 
@@ -60,7 +60,7 @@ def max_min_recession():
     and finds the most amount of money that was in circulation at the time, as
     well as the least amount of money. These are then plotted.
 
-    return: Nothing is returned by this function as it creates a plot
+    return: Nothing is returned by this function as it creates a plot.
     """
     df = pd.read_csv('MBCURRCIR.csv', index_col=0, header=0)
 
@@ -125,7 +125,7 @@ def mean_all_years():
     This function plots a graph that shows the mean of the data for each year
     in the dataset, excluding the year 2023.
 
-    return: Nothing is returned by this function as it creates a plot
+    return: Nothing is returned by this function as it creates a plot.
     """
     df = pd.read_csv('MBCURRCIR.csv', index_col=0, header=0)
 
