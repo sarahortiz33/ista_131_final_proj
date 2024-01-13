@@ -1,3 +1,12 @@
+"""
+    Name: Sarah Ortiz
+    Section Leader: Kapua Ionae
+    Date: 11/27/2023
+    ISTA 131 Final Project
+    Summary: This project creates
+"""
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,7 +18,7 @@ def reserves_15_years():
     This function creates a scatter plot with a regression line using the data
     from 2007 to 2022.
 
-    return: Nothing is returned by this function as it creates a plot.
+    return: Nothing is returned by this function as it creates a plot
     """
     df = pd.read_csv('TOTRESNS.csv', index_col=0)
 
@@ -60,7 +69,7 @@ def max_min_recession():
     and finds the most amount of money that was in circulation at the time, as
     well as the least amount of money. These are then plotted.
 
-    return: Nothing is returned by this function as it creates a plot.
+    return: Nothing is returned by this function as it creates a plot
     """
     df = pd.read_csv('MBCURRCIR.csv', index_col=0, header=0)
 
@@ -125,12 +134,14 @@ def mean_all_years():
     This function plots a graph that shows the mean of the data for each year
     in the dataset, excluding the year 2023.
 
-    return: Nothing is returned by this function as it creates a plot.
+    return: Nothing is returned by this function as it creates a plot
     """
     df = pd.read_csv('MBCURRCIR.csv', index_col=0, header=0)
 
     cur = []
     data = []
+    beg_yr = []
+    end_yr = []
 
     # Loops through the data so that the mean amount of money from each year
     # can be calculated
@@ -148,7 +159,7 @@ def mean_all_years():
 
     # Adds labels to figure and formats it
     plt.figure(facecolor='#c7ebcc')
-    plt.plot(dates, bil_data, color='g')
+    plt.plot(dates, bil_data, color='g', marker='o')
     plt.xlabel('Time in Years', fontsize=15)
     plt.ylabel('Money in Circulation (in billions)', fontsize=20)
     plt.title('Mean Amount of Money for each Year (excluding 2023)',
